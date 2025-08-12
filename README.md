@@ -6,6 +6,16 @@ This guide explains:
 
 ---
 
+# 0. Prerequisites
+Before you start:
+
+1. Download and install Visual Studio Code.
+
+2. Install the Continue extension in VS Code (search “Continue” in the Extensions Marketplace).
+
+Without VS Code and the Continue extension, you won’t have the .continue folder or config.yaml file.
+---
+
 ## 1. Locate the `.continue` folder (Continue configuration)
 
 Continue stores its global settings inside a hidden folder named `.continue` in your **user directory**.
