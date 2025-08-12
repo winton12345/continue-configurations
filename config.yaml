@@ -1,0 +1,43 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+
+models:
+  - name: LLaMA 3 (Meta 70B Instruct)
+    provider: bedrock
+    model: meta.llama3-70b-instruct-v1:0
+    env:
+      region: us-gov-west-1
+      profile: bedrock
+    defaultCompletionOptions:
+      maxTokens: 1024
+    roles:
+      - chat
+      - edit
+      - apply
+  - name: Claude 3.7 Sonnet (Anthropic)
+    provider: bedrock
+    model: anthropic.claude-3-7-sonnet-20250219-v1:0
+    env:
+      region: us-gov-west-1
+      profile: bedrock
+    defaultCompletionOptions:
+      maxTokens: 4096
+    roles:
+      - chat
+      - edit
+      - apply
+
+
+context:
+  - provider: file
+  - provider: code
+  - provider: codebase
+    params:
+      nFinal: 10
+  - provider: docs
+  - provider: diff
+  
+  - provider: folder
+  - provider: terminal
+
