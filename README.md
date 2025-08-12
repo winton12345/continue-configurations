@@ -93,11 +93,12 @@ Follow these steps to configure AWS credentials for use with Continue or any too
 3. Create a new folder called .aws and within that folder you create a new file called credentials.
 4. Open the credentials file with a text editor (e.g., Notepad on Windows, TextEdit on macOS).
 5. Add the following content to the credentials file:
-
+```
 [bedrock]
 aws_access_key_id = "your own credentials"
 aws_secret_access_key = "your own credentials"
 region = us-gov-west-1
+```
 
 
 2) if you already have the aws cli installed simply edit the credentials file in the .aws folder.
